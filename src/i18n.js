@@ -13,7 +13,7 @@ i18n
       escapeValue: false, // لإلغاء الهروب في النصوص
     },
     backend: {
-      loadPath: '/src/locales/{{lng}}/translation.json' // مسار ملفات الترجمة
+      loadPath: '/locales/{{lng}}/translation.json' // مسار ملفات الترجمة
     }
   });
 
