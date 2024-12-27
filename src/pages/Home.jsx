@@ -180,7 +180,7 @@ export default function Home() {
           </div>
         </div>
         {/* our Client */}
-        <div className="flex flex-col  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
+        <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
           <div className="absolute left-0 top-0 z-[1000]">
             <img src={desighn03} className="w-[800px] scale-x-[-1]" alt="Map" />
           </div>
