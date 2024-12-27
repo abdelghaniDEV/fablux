@@ -58,20 +58,23 @@ export default function Header() {
         } absolute md:static top-[70px] left-0 w-full md:w-auto bg-main-accent md:bg-transparent z-50 md:flex md:items-center`}
       >
         <ul className="flex flex-col md:flex-row items-center md:gap-[60px] text-[18px] text-white p-4 md:p-0">
-          <li className="py-2 md:py-0">
+          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <Link to={"/"}>{t("header.home")}</Link>
           </li>
-          <li className="py-2 md:py-0">
+          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <Link to={"#"}>{t("header.about")}</Link>
           </li>
-          <li className="py-2 md:py-0">
+          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <a href="#">{t("header.services")}</a>
           </li>
-          <li className="py-2 md:py-0">
+          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <Link to={"/business"}>{t("header.business")}</Link>
           </li>
           <Button
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            setOpen(true)
+            setOpenNav(false)
+          }}
           className="md:hidden text-white py-2 px-4 rounded-md"
         >
           {t("header.contact")}
