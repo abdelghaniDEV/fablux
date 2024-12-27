@@ -55,10 +55,10 @@ export default function Home() {
         </div>
         <div className="flex justify-center flex-col items-center gap-4 md:py-4  z-[1000]">
           <h1 className=" text-[25px] md:text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">
-            We have a distinguished group <br /> in various businesses.
+            {t('hero.title1')}
           </h1>
           <Button className="text-[20px] flex items-center gap-3">
-            <span>Take A Look</span>
+            <span>{t('hero.button')}</span>
             <BriefcaseBusiness />
           </Button>
         </div>
@@ -113,7 +113,7 @@ export default function Home() {
               <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
                 {t("service.title")}
               </h2>
-              <p className="md:px-[200px] text-center text-[20px] font-[700]">
+              <p className="md:px-[200px] text-center md:text-[20px] font-[700]">
                 {/* <span className="text-[#00C4F499]">Fablux Group</span>  */}
                 {t("service.description")}
               </p>

@@ -70,6 +70,12 @@ export default function Header() {
           <li className="py-2 md:py-0">
             <Link to={"/business"}>{t("header.business")}</Link>
           </li>
+          <Button
+          onClick={() => setOpen(true)}
+          className="md:hidden text-white py-2 px-4 rounded-md"
+        >
+          {t("header.contact")}
+        </Button>
         </ul>
       </nav>
 
@@ -77,7 +83,7 @@ export default function Header() {
       <div className="flex items-center gap-5">
         <Button
           onClick={() => setOpen(true)}
-          className=" text-white py-2 px-4 rounded-md"
+          className="hidden md:block text-white py-2 px-4 rounded-md"
         >
           {t("header.contact")}
         </Button>

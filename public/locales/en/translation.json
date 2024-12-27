@@ -31,7 +31,9 @@
   "hero": {
     "title": "Growing up business for good future brand",
     "subtitle": "Growing up business for good future brand",
-    "text": "With Fablox Group, your path to success is 100% guaranteed because you are dealing with a group of specialists and experts in the world of software."
+    "text": "With Fablox Group, your path to success is 100% guaranteed because you are dealing with a group of specialists and experts in the world of software.",
+    "title1" : "We have a distinguished group in various businesses." , 
+    "button": "Take A Look"
   },
   "about": {
     "about": "About Us",
