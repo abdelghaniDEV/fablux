@@ -15,6 +15,7 @@ import { fetchProject } from "../redux/slices/projectSlice";
 function App() {
   const { pathname } = useLocation();
   const diapatch = useDispatch()
+  
 
   useEffect(() => {
     // Scroll to top on pathname change
