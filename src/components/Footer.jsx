@@ -86,15 +86,15 @@ export default function Footer() {
             <li className="flex gap-2 items-center">
               {/* <i className="bx bx-phone text-main-primary text-[30px]"></i> */}
               <Phone className="text-main-primary" />
-              <spna>(205) 555-01000</spna>
+              <span>(205) 555-01000</span>
             </li>
             <li className="flex gap-2 items-center">
               <Clock className="text-main-primary" />
-              <spna>Mon - Fri : 9 am- 11 pm</spna>
+              <span>Mon - Fri : 9 am- 11 pm</span>
             </li>
             <li className="flex gap-2 items-center">
               <Mail className="text-main-primary" />
-              <spna>Email@Fablux Group.com</spna>
+              <span>Email@Fablux Group.com</span>
             </li>
           </ul>
         </div>

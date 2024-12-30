@@ -115,7 +115,7 @@ export default function Header() {
           <DialogHeader>
             <DialogTitle></DialogTitle>
             <DialogDescription>
-              <Contact />
+              <Contact setOpen={setOpen} />
             </DialogDescription>
           </DialogHeader>
         </DialogContent>

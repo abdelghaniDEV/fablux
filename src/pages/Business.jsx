@@ -7,9 +7,11 @@ import framer02 from "../assets/Frame 840.png";
 import image2 from "../assets/Frame 947.png";
 import BoxWorks from "../components/BoxWorks";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 
 export default function Business() {
   const { t } = useTranslation()
+  const projects = useSelector((state) => state.projects)
   return (
     <div className="container relative overflow-hidden">
       <div className="flex flex-col items-center gap-4  justify-center py-10">
@@ -20,61 +22,16 @@ export default function Business() {
           {t('portfolio.description')}
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
-        <BoxWorks
-          title={"Application programming"}
-          image={image2}
-          company={"Nishan Market"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
-        <BoxWorks
-          title={"Photography"}
-          image={photo}
-          company={"Al Rayyan Company"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
-         <BoxWorks
-          title={"Application programming"}
-          image={image2}
-          company={"Nishan Market"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
-         <BoxWorks
-          title={"Photography"}
-          image={photo}
-          company={"Al Rayyan Company"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
-         <BoxWorks
-          title={"Application programming"}
-          image={image2}
-          company={"Nishan Market"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
-        <BoxWorks
-          title={"Photography"}
-          image={photo}
-          company={"Al Rayyan Company"}
-          description={
-            "We provide a professional logo design service that expresses your brand identity and reflects its message and value.We provide a professional logo design service that expresses your brand identity and reflects its message and value."
-          }
-          days={15}
-        />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 relative ">
+        {projects.map((project) => {
+          return (
+            <BoxWorks
+              project={project}
+            />
+          );
+        })}
+        
+        
       </div>
       <div className="">
         <img
@@ -87,8 +44,9 @@ export default function Business() {
         />
         <img
           src={back}
-          className="w-full absolute h-full top-[60%] left-[50%] translate-x-[-50%]  z-[-1] "
+          className="w-full absolute h-[700px] top-[25%] opacity-[0.5] left-[50%] translate-x-[-50%]  z-[-1] "
         />
+       
       </div>
     </div>
   );

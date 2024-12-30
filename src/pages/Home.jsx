@@ -23,6 +23,8 @@ import map from "../assets/kh.png";
 import design02 from "../assets/Frame 866.png";
 import desighn03 from "../assets/Frame 894.png";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import SliderProject from "../components/sliderProject";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -57,9 +59,11 @@ export default function Home() {
           <h1 className=" text-[25px] md:text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">
             {t('hero.title1')}
           </h1>
-          <Button className="text-[20px] flex items-center gap-3">
-            <span>{t('hero.button')}</span>
-            <BriefcaseBusiness />
+          <Button className="">
+           <Link to={'/business'} className="text-[20px] flex items-center gap-3">
+           <span>{t('hero.button')}</span>
+           <BriefcaseBusiness />
+           </Link>
           </Button>
         </div>
         <div>
@@ -179,6 +183,8 @@ export default function Home() {
             />
           </div>
         </div>
+        {/* slider */}
+        <SliderProject />
         {/* our Client */}
         <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
           <div className="absolute left-0 top-0 z-[1000]">

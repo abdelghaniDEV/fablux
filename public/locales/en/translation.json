@@ -93,19 +93,23 @@
     "subtitle" : "Leave your message and we will contact you as soon as possible",
       "email" : {
         "label" : "E-mail",
-        "placeholder" : "Entre your Email"
+        "placeholder" : "Entre your Email",
+        "error" : "Please enter a valid email address"
       },
       "name" : {
         "label" : "Your Company Name",
-        "placeholder" : "Entre your Company Name"
+        "placeholder" : "Entre your Company Name",
+        "error" : "Please enter your company name"
       },
       "phone" : {
         "label" : "Contact phone number",
-        "placeholder" : "Entre your Phone Number"
+        "placeholder" : "Entre your Phone Number",
+        "error" : "Please enter a valid phone number"
       },
       "message" : {
         "label" : "Message topic",
-        "placeholder" : "Entre your Message"
+        "placeholder" : "Entre your Message",
+        "error" : "Please enter your message topic"
       },
       "submit" : "Send"
     
