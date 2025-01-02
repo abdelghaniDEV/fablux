@@ -125,7 +125,7 @@ export default function Home() {
               {t("about.title")}
             </h1>
             {i18n.language === "en" ? (
-              <p className="text-[18px]">
+              <p className="text-[14px] md:text-[18px]">
                 At{" "}
                 <span className="font-[700] text-main-primary">
                   {" "}
@@ -153,7 +153,7 @@ export default function Home() {
                 </span>
               </p>
             ) : (
-              <p className="text-[18px]">
+              <p className="text-[14px] md:text-[18px]">
                 في{" "}
                 <span className="text-main-primary font-[700]">
                   مجموعة فابلوكس
