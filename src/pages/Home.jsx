@@ -18,6 +18,7 @@ import {
   PenTool,
 } from "lucide-react";
 import icon1 from "../assets/pajamas_applications.png";
+import { motion } from "motion/react";
 import BoxService from "../components/BoxService";
 import map from "../assets/kh.png";
 import design02 from "../assets/Frame 866.png";
@@ -30,10 +31,15 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   return (
     <div className="overflo overflow-hidden">
-      <div className="container"> 
+      <div className="container">
         {/* hero */}
         <div className="md:flex   items-center gap-[100px] py-10 relative z-[40]">
-          <div className="md:w-[700px] text-center md:text-start z-[10]">
+          <motion.div
+            initial={{ x: -200 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="md:w-[700px] text-center md:text-start z-[10]"
+          >
             <h3 className=" text-[30px] md:text-[50px] text-main-primary font-[700]">
               Fablux Group
             </h3>
@@ -47,25 +53,37 @@ export default function Home() {
             >
               {t("hero.text")}
             </p>
-          </div>
-          <div className="z-[20] hidden md:block">
+          </motion.div>
+          <motion.div
+            initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+           className="z-[20] hidden md:block">
             <img src={logoHero} className="w-[350px]" alt="Logo Hero" />
-          </div>
+          </motion.div>
           <div className="absolute right-[30px] z-[-1] hidden">
             <img src={desighn} className="z-[-1] w-[500px]" alt="Design" />
           </div>
         </div>
-        <div className="flex justify-center flex-col items-center gap-4 md:py-4  z-[1000]">
+        <motion.div
+          initial={{ opacity : 0 }}
+          whileInView={{ opacity : 1}}
+          transition={{ duration: 1 }}
+          className="flex justify-center flex-col items-center gap-4 md:py-4  z-[1000]"
+        >
           <h1 className=" text-[25px] md:text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">
-            {t('hero.title1')}
+            {t("hero.title1")}
           </h1>
           <Button className="">
-           <Link to={'/business'} className="text-[20px] flex items-center gap-3">
-           <span>{t('hero.button')}</span>
-           <BriefcaseBusiness />
-           </Link>
+            <Link
+              to={"/business"}
+              className="text-[20px] flex items-center gap-3"
+            >
+              <span>{t("hero.button")}</span>
+              <BriefcaseBusiness />
+            </Link>
           </Button>
-        </div>
+        </motion.div>
         <div>
           <img
             src={desighn}
@@ -81,25 +99,84 @@ export default function Home() {
           />
         </div>
         {/* about */}
-        <div className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-10 py-4 relative ">
-          <div className="z-[]">
-            <img src={GroupImg} className="md:w-full w-[200px]" alt="Group Image" />
-          </div>
-          <div className="z-[1000] text-center md:text-start">
+        <div
+         
+         className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
+          <motion.div
+            initial={{ x: -100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+           className="z-[]">
+            <img
+              src={GroupImg}
+              className="md:w-[1100px] w-[200px]"
+              alt="Group Image"
+            />
+          </motion.div>
+          <motion.div 
+           initial={{ x: 100 }}
+          whileInView={{ x: 0 }}
+          transition={{ duration: 1 }}
+          className="z-[1000] text-center md:text-start">
             <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
               {t("about.about")}
             </h2>
-            <h1 className="text-[30px] md:text-[36px] font-[700]">{t("about.title")}</h1>
-            <p className="leading-[25px] py-3 font-outfit  ">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute mollit anim id
-              est laborum magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute mollit anim id est laborum.
-            </p>
-          </div>
+            <h1 className="text-[25px] md:text-[36px] font-[700]">
+              {t("about.title")}
+            </h1>
+            {i18n.language === "en" ? (
+              <p className="text-[18px]">
+                At{" "}
+                <span className="font-[700] text-main-primary">
+                  {" "}
+                  fablux group
+                </span>
+                , we bring visions to life through innovative digital solutions.
+                From user-focused websites and dynamic
+                <span className="text-main-primary">
+                  {" "}
+                  e-commerce platforms
+                </span>{" "}
+                to <span className="text-main-primary">mobile apps</span>,
+                <span className="text-main-primary"> digital marketing</span>,
+                and
+                <span className="text-main-primary"> creative content</span>, we
+                help brands stand out in a competitive world.
+                <br />
+                Our passionate team works closely with clients to deliver
+                tailored strategies that ensure success and build a strong
+                digital presence.
+                <br />
+                <span className="font-[700] text-main-primary mt-1">
+                  Join us to build a strong digital presence and achieve
+                  remarkable success. Let’s create the future together!
+                </span>
+              </p>
+            ) : (
+              <p className="text-[18px]">
+                في{" "}
+                <span className="text-main-primary font-[700]">
+                  مجموعة فابلوكس
+                </span>
+                ، نحول الرؤى إلى واقع من خلال حلول رقمية مبتكرة. بدءًا من
+                المواقع الموجهة للمستخدم ومنصات التجارة الإلكترونية الديناميكية
+                إلى تطبيقات الهواتف، التسويق الرقمي، والمحتوى الإبداعي، نساعد
+                العلامات التجارية على التميز في عالم تنافسي.
+                <br />
+                <span className="font-[700]">
+                  يعمل فريقنا من المطورين والمصممين والمسوقين وخبراء التصوير
+                  بإبداع وشغف لتحقيق رؤيتك. نتبع نهجًا يركز على العميل، حيث نعمل
+                  معك خطوة بخطوة لفهم أهدافك وتقديم حلول مخصصة تميزك في العالم
+                  الرقمي.
+                </span>
+                <br />
+                <span className="text-main-primary font-[700]">
+                  انضم إلينا لنساعدك في بناء حضور رقمي قوي وتحقيق نجاح باهر دعنا
+                  نبني المستقبل معًا!
+                </span>
+              </p>
+            )}
+          </motion.div>
           <div className="absolute right-[-200px] top-1 z-[-1]">
             <img src={design02} className="w-[800px]" alt="Map" />
           </div>
@@ -192,13 +269,11 @@ export default function Home() {
           </div>
           <div className="md:w-[600px] z-[1000]">
             <h2 className="text-[40px] font-[700] text-main-primary">
-              {t('vision.title')}
+              {t("vision.title")}
             </h2>
-            <h1 className="text-[30px] font-[700]">
-              {t('vision.subtitle')}
-            </h1>
+            <h1 className="text-[30px] font-[700]">{t("vision.subtitle")}</h1>
             <p className="leading-[25px] py-3 font-outfit text-main-text   ">
-              {t('vision.text')}
+              {t("vision.text")}
             </p>
             <div className="grid grid-cols-3 items-center">
               <div className="font-outfit flex flex-col items-center">
