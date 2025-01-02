@@ -27,10 +27,12 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import SliderProject from "../components/sliderProject";
 
+
 export default function Home() {
   const { t, i18n } = useTranslation();
   const title = t("hero.title");
   const text = "Fablux Group"
+  const titleService =  t("service.title")
   return (
     <div className="overflo overflow-hidden">
       <div className="container">
@@ -213,12 +215,25 @@ export default function Home() {
           <div className="z-[1000]">
             <div className="flex flex-col justify-center items-center gap-2">
               <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
-                {t("service.title")}
+              {titleService.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
               </h2>
-              <p className="md:px-[200px] text-center md:text-[20px] font-[700]">
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+               className="md:px-[200px] text-center md:text-[20px] font-[700]">
                 {/* <span className="text-[#00C4F499]">Fablux Group</span>  */}
                 {t("service.description")}
-              </p>
+              </motion.p>
             </div>
           </div>
           {/* list Service */}
@@ -285,10 +300,16 @@ export default function Home() {
         <SliderProject />
         {/* our Client */}
         <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
-          <div className="absolute left-0 top-0 z-[1000]">
+          <motion.div
+            
+           className="absolute left-0 top-0 z-[1000]">
             <img src={desighn03} className="w-[800px] scale-x-[-1]" alt="Map" />
-          </div>
-          <div className="md:w-[600px] z-[1000]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+           className="md:w-[600px] z-[1000]">
             <h2 className="text-[40px] font-[700] text-main-primary">
               {t("vision.title")}
             </h2>
@@ -310,10 +331,14 @@ export default function Home() {
                 <span>Big Company</span>
               </div>
             </div>
-          </div>
-          <div className="z-[1000]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+           className="z-[1000]">
             <img src={map} className="w-full z-[1000]" alt="Group Image" />
-          </div>
+          </motion.div>
           <img
             src={desighn}
             className="w-[800px] absolute scale-x-[-1] right-[-200px] opacity-[0.6] top-1 z-[100]"
