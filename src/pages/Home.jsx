@@ -29,22 +29,42 @@ import SliderProject from "../components/sliderProject";
 
 export default function Home() {
   const { t, i18n } = useTranslation();
+  const title = t("hero.title");
+  const text = "Fablux Group"
   return (
     <div className="overflo overflow-hidden">
       <div className="container">
         {/* hero */}
         <div className="md:flex   items-center gap-[100px] py-10 relative z-[40]">
           <motion.div
-            initial={{ x: -200 }}
-            whileInView={{ x: 0 }}
-            transition={{ duration: 1 }}
+            // initial={{ x: -200 }}
+            // whileInView={{ x: 0 }}
+            // transition={{ duration: 1 }}
             className="md:w-[700px] text-center md:text-start z-[10]"
           >
             <h3 className=" text-[30px] md:text-[50px] text-main-primary font-[700]">
-              Fablux Group
+            {text.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
             </h3>
             <h1 className="text-[30px] md:text-[50px] font-[700] leading-[38px] md:leading-[65px] pb-5">
-              {t("hero.title")}
+              {title.split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.05, duration: 0.5 }}
+                >
+                  {char}
+                </motion.span>
+              ))}
             </h1>
             <p
               className={`md:text-[20px] ${
@@ -56,9 +76,10 @@ export default function Home() {
           </motion.div>
           <motion.div
             initial={{ x: 100 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
-           className="z-[20] hidden md:block">
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="z-[20] hidden md:block"
+          >
             <img src={logoHero} className="w-[350px]" alt="Logo Hero" />
           </motion.div>
           <div className="absolute right-[30px] z-[-1] hidden">
@@ -66,8 +87,8 @@ export default function Home() {
           </div>
         </div>
         <motion.div
-          initial={{ opacity : 0 }}
-          whileInView={{ opacity : 1}}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           className="flex justify-center flex-col items-center gap-4 md:py-4  z-[1000]"
         >
@@ -99,25 +120,25 @@ export default function Home() {
           />
         </div>
         {/* about */}
-        <div
-         
-         className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
+        <div className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
           <motion.div
             initial={{ x: -100 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
-           className="z-[]">
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="z-[]"
+          >
             <img
               src={GroupImg}
               className="md:w-[1100px] w-[200px]"
               alt="Group Image"
             />
           </motion.div>
-          <motion.div 
-           initial={{ x: 100 }}
-          whileInView={{ x: 0 }}
-          transition={{ duration: 1 }}
-          className="z-[1000] text-center md:text-start">
+          <motion.div
+            initial={{ x: 100 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: 1 }}
+            className="z-[1000] text-center md:text-start"
+          >
             <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
               {t("about.about")}
             </h2>
