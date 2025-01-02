@@ -147,7 +147,7 @@ export default function Home() {
                 tailored strategies that ensure success and build a strong
                 digital presence.
                 <br />
-                <span className="font-[700] text-main-primary mt-1">
+                <span className="font-[700] text-main-accent mt-1">
                   Join us to build a strong digital presence and achieve
                   remarkable success. Let’s create the future together!
                 </span>
@@ -170,7 +170,7 @@ export default function Home() {
                   الرقمي.
                 </span>
                 <br />
-                <span className="text-main-primary font-[700]">
+                <span className=" font-[700] text-main-accent">
                   انضم إلينا لنساعدك في بناء حضور رقمي قوي وتحقيق نجاح باهر دعنا
                   نبني المستقبل معًا!
                 </span>
