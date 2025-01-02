@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <div className=" bg-[#00C4F44D]  mt-10 ">
       <div
-        className={`container grid md:grid-cols-3 gap-[22px] ${
+        className={` grid md:grid-cols-3 gap-[22px] ${
           i18n.language === "ar" ? "font-Tajawal" : "font-outfit"
         }  p-10`}
       >
@@ -108,6 +108,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="text-center pb-2">
+      <span className="text-[13px] font-[700]">Fablux Group © 2022 - All rights reserved</span>
       </div>
     </div>
   );

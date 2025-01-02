@@ -1,5 +1,5 @@
 import { Globe, Menu } from "lucide-react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../assets/Frame 843.png";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -24,16 +24,36 @@ import Contact from "./Contact";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [lang, setLang] = useState("En");
+  const [lang, setLang] = useState("en");
   const { t, i18n } = useTranslation();
+  const [changeLang, setChangeLang] = useState(false);
   const [openNav, setOpenNav] = useState(false);
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language); // change language
-    document.body.dir = language === "ar" ? "rtl" : "ltr"; // change arrow direction
-    document.body.className = language === "ar" && "font-tajawal"; // change font
-    setLang(language); // update state with the new language
-  };
+  useEffect(() => {
+    const changeLanguage = () => {
+     
+      if (changeLang) {
+        i18n.changeLanguage("ar"); 
+        document.body.dir = "rtl"; 
+        document.body.className = "font-tajawal"; 
+        setLang("ar"); 
+      } else {
+        i18n.changeLanguage("en"); 
+        document.body.dir = "ltr"; 
+        document.body.className = ""; 
+        setLang("en"); 
+      }
+    };
+  
+    changeLanguage();
+  }, [changeLang, i18n]); 
+
+  // const changeLanguage = (language) => {
+  //   i18n.changeLanguage(language); // change language
+  //   document.body.dir = language === "ar" ? "rtl" : "ltr"; // change arrow direction
+  //   document.body.className = language === "ar" && "font-tajawal"; // change font
+  //   setLang(language); // update state with the new language
+  // };
   return (
     <div className="flex items-center justify-between py-4 container relative px-4">
       {/* Logo and Menu Button */}
@@ -71,14 +91,14 @@ export default function Header() {
             <Link to={"/business"}>{t("header.business")}</Link>
           </li>
           <Button
-          onClick={() => {
-            setOpen(true)
-            setOpenNav(false)
-          }}
-          className="md:hidden text-white py-2 px-4 rounded-md"
-        >
-          {t("header.contact")}
-        </Button>
+            onClick={() => {
+              setOpen(true);
+              setOpenNav(false);
+            }}
+            className="md:hidden text-white py-2 px-4 rounded-md"
+          >
+            {t("header.contact")}
+          </Button>
         </ul>
       </nav>
 
@@ -92,20 +112,7 @@ export default function Header() {
         </Button>
         <div className="flex gap-1 items-center">
           <span className="text-[15px]">{lang}</span>
-          <DropdownMenu>
-            <DropdownMenuTrigger>
-              <Globe />
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem onClick={() => changeLanguage("ar")}>
-                Arabe
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage("en")}>
-                English
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Globe onClick={() => setChangeLang(!changeLang)} className=" cursor-pointer" />
         </div>
       </div>
 
