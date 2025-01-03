@@ -7,3 +7,8 @@ body {
     color : #fff ;
     font-family: "Inria Serif", serif;
 }
+
+html {
+    scroll-padding-top: 70px; /* تعديل هذا الرقم حسب ارتفاع الهيدر */
+    scroll-behavior: smooth; /* لجعل التنقل سلس */
+  }

@@ -34,14 +34,12 @@ export default function Home() {
   const text = "Fablux Group"
   const titleService =  t("service.title")
   return (
-    <div className="overflo overflow-hidden">
+    <div className="overflo overflow-hidden ">
       <div className="container">
         {/* hero */}
         <div className="md:flex   items-center gap-[100px] py-10 relative z-[40]">
           <motion.div
-            // initial={{ x: -200 }}
-            // whileInView={{ x: 0 }}
-            // transition={{ duration: 1 }}
+            
             className="md:w-[700px] text-center md:text-start z-[10]"
           >
             <h3 className=" text-[30px] md:text-[50px] text-main-primary font-[700]">
@@ -57,16 +55,7 @@ export default function Home() {
               ))}
             </h3>
             <h1 className="text-[30px] md:text-[50px] font-[700] leading-[38px] md:leading-[65px] pb-5">
-              {title.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05, duration: 0.5 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
+               {t('hero.title')}
             </h1>
             <p
               className={`md:text-[20px] ${
@@ -122,7 +111,7 @@ export default function Home() {
           />
         </div>
         {/* about */}
-        <div className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
+        <div id="about" className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
           <motion.div
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
@@ -205,7 +194,7 @@ export default function Home() {
           </div>
         </div>
         {/* our Services */}
-        <div className="relative">
+        <div id="services" className="relative">
           <div className="absolute left-[-200px] top-20 z-[100]">
             <img src={design02} className="w-[800px] scale-x-[-1]" alt="Map" />
           </div>
@@ -237,7 +226,7 @@ export default function Home() {
             </div>
           </div>
           {/* list Service */}
-          <div className="grid md:grid-cols-4 gap-[10px] my-8 z-[1000]">
+          <div  className="grid md:grid-cols-4 gap-[10px] my-8 z-[1000]">
             <BoxService
               icon={
                 <LayoutGrid className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />

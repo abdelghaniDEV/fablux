@@ -48,14 +48,21 @@ export default function Header() {
     changeLanguage();
   }, [changeLang, i18n]); 
 
-  // const changeLanguage = (language) => {
-  //   i18n.changeLanguage(language); // change language
-  //   document.body.dir = language === "ar" ? "rtl" : "ltr"; // change arrow direction
-  //   document.body.className = language === "ar" && "font-tajawal"; // change font
-  //   setLang(language); // update state with the new language
-  // };
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const headerHeight = 70; // ارتفاع الهيدر (تعديله حسب تصميمك)
+      const sectionPosition = section.offsetTop - headerHeight;
+  
+      window.scrollTo({
+        top: sectionPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+  
   return (
-    <div className="flex items-center justify-between py-4 container relative px-4">
+    <div className="flex items-center justify-between py-4 container relative px-10">
       {/* Logo and Menu Button */}
       <div className="flex items-center gap-1">
         {/* Hamburger Menu Button */}
@@ -81,11 +88,17 @@ export default function Header() {
           <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <Link to={"/"}>{t("header.home")}</Link>
           </li>
-          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
-            <Link to={"#"}>{t("header.about")}</Link>
+          <li className="py-2 md:py-0" onClick={() => {
+            setOpenNav(false)
+            scrollToSection("about")
+          }}>
+            {t("header.about")}
           </li>
-          <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
-            <a href="#">{t("header.services")}</a>
+          <li className="py-2 md:py-0" onClick={() => {
+            setOpenNav(false)
+            scrollToSection("services")
+          }} >
+            {t("header.services")}
           </li>
           <li className="py-2 md:py-0" onClick={() => setOpenNav(false)}>
             <Link to={"/business"}>{t("header.business")}</Link>
