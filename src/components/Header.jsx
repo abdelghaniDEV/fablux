@@ -62,7 +62,7 @@ export default function Header() {
   };
   
   return (
-    <div className="flex items-center justify-between py-4 container relative px-10">
+    <div className="flex items-center justify-between py-4 container relative md:px-10">
       {/* Logo and Menu Button */}
       <div className="flex items-center gap-1">
         {/* Hamburger Menu Button */}
