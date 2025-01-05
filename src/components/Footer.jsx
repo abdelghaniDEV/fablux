@@ -74,10 +74,10 @@ export default function Footer() {
                 <Link to={"/"}>{t("header.home")}</Link>
               </li>
               <li>
-                <Link href="#">{t("header.about")}</Link>
+                <a href="#about">{t("header.about")}</a>
               </li>
               <li>
-                <a href="#">{t("header.services")}</a>
+                <a href="#services">{t("header.services")}</a>
               </li>
               <li>
                 <Link to={"/business"}>{t("header.business")}</Link>

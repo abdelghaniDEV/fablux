@@ -7,6 +7,7 @@ import {
   A11y,
   Autoplay,
 } from "swiper/modules";
+import framer from "../assets/Frame 866.png"
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -25,7 +26,7 @@ export default function SliderProject() {
   const projects = useSelector((state) => state.projects);
   const { t, i18n } = useTranslation();
   return (
-    <div className="">
+    <div className="relative">
       <div
         className="md:p-6 p-4 text-left "
         dir="rtl"
@@ -66,7 +67,7 @@ export default function SliderProject() {
                   </div>
                   <div className="flex flex-col gap-2 md:gap-5 pt-5">
                     <h2 className="text-[20px] md:text-[30px] text-main-primary font-[600]">
-                     {i18n.language === "ar" ?  " أخر أعملنا" : "Latest works"}
+                      {i18n.language === "ar" ? " أخر أعملنا" : "Latest works"}
                     </h2>
                     <h1 className="text-[25px] md:text-[30px] font-[600]">
                       {i18n.language === "ar"
@@ -97,9 +98,16 @@ export default function SliderProject() {
       </div>
       <div className="flex justify-center">
         <Button className="my-8 text-[18px] py-3 px-4 text-center flex items-center justify-center gap-2">
-          <span>{i18n.language === "en" ? "View full business history" : "مشاهدة معرض الاعمال"}</span>
+          <span>
+            {i18n.language === "en"
+              ? "View full business history"
+              : "مشاهدة معرض الاعمال"}
+          </span>
           <Layers className="h-7 w-7" />
         </Button>
+      </div>
+      <div className="absolute right-[-200px] top-1 z-[-1]">
+        <img src={framer} className="w-[800px]" alt="Map" />
       </div>
     </div>
   );

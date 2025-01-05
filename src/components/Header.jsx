@@ -124,7 +124,7 @@ export default function Header() {
           {t("header.contact")}
         </Button>
         <div className="flex gap-1 items-center">
-          <span className="text-[15px]">{lang}</span>
+          <span className="text-[15px] uppercase">{lang}</span>
           <Globe onClick={() => setChangeLang(!changeLang)} className=" cursor-pointer" />
         </div>
       </div>

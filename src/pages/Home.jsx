@@ -27,23 +27,19 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import SliderProject from "../components/sliderProject";
 
-
 export default function Home() {
   const { t, i18n } = useTranslation();
   const title = t("hero.title");
-  const text = "Fablux Group"
-  const titleService =  t("service.title")
+  const text = "Fablux Group";
+  const titleService = t("service.title");
   return (
     <div className="overflo overflow-hidden ">
       <div className="container">
         {/* hero */}
         <div className="md:flex   items-center gap-[100px] py-10 relative z-[40]">
-          <motion.div
-            
-            className="md:w-[700px] text-center md:text-start z-[10]"
-          >
+          <motion.div className="md:w-[700px] text-center md:text-start z-[10]">
             <h3 className=" text-[30px] md:text-[50px] text-main-primary font-[700]">
-            {text.split("").map((char, index) => (
+              {text.split("").map((char, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0, x: -10 }}
@@ -55,7 +51,7 @@ export default function Home() {
               ))}
             </h3>
             <h1 className="text-[30px] md:text-[50px] font-[700] leading-[38px] md:leading-[65px] pb-5">
-               {t('hero.title')}
+              {t("hero.title")}
             </h1>
             <p
               className={`md:text-[20px] ${
@@ -111,7 +107,10 @@ export default function Home() {
           />
         </div>
         {/* about */}
-        <div id="about" className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative ">
+        <div
+          id="about"
+          className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative "
+        >
           <motion.div
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
@@ -133,10 +132,10 @@ export default function Home() {
             <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
               {t("about.about")}
             </h2>
-            <h1 className="text-[25px] md:text-[36px] font-[700]">
+            <h1 className="text-[25px] md:text-[28px] font-[700]">
               {t("about.title")}
             </h1>
-            {i18n.language === "en" ? (
+            {/* {i18n.language === "en" ? (
               <p className="text-[14px] md:text-[18px]">
                 At{" "}
                 <span className="font-[700] text-main-primary">
@@ -187,6 +186,29 @@ export default function Home() {
                   نبني المستقبل معًا!
                 </span>
               </p>
+            )} */}
+            {i18n.language === "en" ? (
+              <p className="text-[18px]">
+                Fablux Group is a leading company specializing in programming
+                and digital marketing solutions.
+                <br /> We combine innovation, creativity, and cutting-edge
+                technology to deliver tailored services that drive businesses
+                toward success.
+                <br /> Our team is dedicated to crafting powerful digital
+                experiences, from developing custom software and mobile
+                applications to creating impactful marketing strategies.
+                <br /> At Fablux Group, we turn your vision into reality,
+                ensuring measurable results and sustainable growth.
+              </p>
+            ) : (
+              <p className="text-[18px]">
+                من نحن فابلوكس جروب هي شركة رائدة متخصصة في حلول البرمجة
+                والتسويق الرقمي.<br/> نجمع بين الابتكار والإبداع وأحدث التقنيات
+                لتقديم خدمات مخصصة تدفع الأعمال نحو النجاح يكرّس فريقنا جهوده
+                لصنع تجارب رقمية قوية،<br/> من تطوير البرمجيات والتطبيقات المخصصة
+                وصولاً إلى ابتكار استراتيجيات تسويقية مؤثرة في فابلوكس جروب،
+                نحول رؤيتك إلى واقع، مع ضمان تحقيق نتائج ملموسة ونمو مستدام.
+              </p>
             )}
           </motion.div>
           <div className="absolute right-[-200px] top-1 z-[-1]">
@@ -204,29 +226,30 @@ export default function Home() {
           <div className="z-[1000]">
             <div className="flex flex-col justify-center items-center gap-2">
               <h2 className="text-[28px] md:text-[40px] font-[700] text-main-primary">
-              {titleService.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05, duration: 0.5 }}
-                >
-                  {char}
-                </motion.span>
-              ))}
+                {titleService.split("").map((char, index) => (
+                  <motion.span
+                    key={index}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.05, duration: 0.5 }}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
               </h2>
               <motion.p
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-               className="md:px-[200px] text-center md:text-[20px] font-[700]">
+                className="md:px-[200px] text-center md:text-[20px] font-[700]"
+              >
                 {/* <span className="text-[#00C4F499]">Fablux Group</span>  */}
                 {t("service.description")}
               </motion.p>
             </div>
           </div>
           {/* list Service */}
-          <div  className="grid md:grid-cols-4 gap-[10px] my-8 z-[1000]">
+          <div className="grid md:grid-cols-4 gap-[10px] my-8 z-[1000]">
             <BoxService
               icon={
                 <LayoutGrid className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
@@ -289,16 +312,15 @@ export default function Home() {
         <SliderProject />
         {/* our Client */}
         <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
-          <motion.div
-            
-           className="absolute left-0 top-0 z-[1000]">
+          <motion.div className="absolute left-0 top-0 z-[1000]">
             <img src={desighn03} className="w-[800px] scale-x-[-1]" alt="Map" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-           className="md:w-[600px] z-[1000]">
+            className="md:w-[600px] z-[1000]"
+          >
             <h2 className="text-[40px] font-[700] text-main-primary">
               {t("vision.title")}
             </h2>
@@ -325,7 +347,8 @@ export default function Home() {
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1 }}
-           className="z-[1000]">
+            className="z-[1000]"
+          >
             <img src={map} className="w-full z-[1000]" alt="Group Image" />
           </motion.div>
           <img
