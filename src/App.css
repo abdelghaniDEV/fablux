@@ -12,3 +12,8 @@ html {
     scroll-padding-top: 70px; /* تعديل هذا الرقم حسب ارتفاع الهيدر */
     scroll-behavior: smooth; /* لجعل التنقل سلس */
   }
+
+
+  .swiper-slide {
+    width: auto !important; /* يجعل العرض يتكيف مع المحتوى */
+  }

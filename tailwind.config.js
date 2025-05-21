@@ -3,15 +3,15 @@ export default {
   darkMode: ["class"],
   content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
   theme: {
-    container: {
-      padding: {
-        DEFAULT: "1rem",
-        sm: "2rem",
-        lg: "4rem",
-        xl: "5rem",
-        "2xl": "6rem",
-      },
-    },
+    // container: {
+    //   padding: {
+    //     DEFAULT: "1rem",
+    //     sm: "2rem",
+    //     lg: "4rem",
+    //     xl: "5rem",
+    //     "2xl": "6rem",
+    //   },
+    // },
     extend: {
       backgroundImage: {
         'custom-gradient': "linear-gradient(-52deg, #19e7f7 0%, #067b84 100%)",

@@ -77,7 +77,7 @@ export default function Home() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex justify-center flex-col items-center gap-4 md:py-4  z-[1000]"
+          className="flex justify-center flex-col items-center gap-4 md:pt-4 md:pb-[100px]  z-[1000]"
         >
           <h1 className=" text-[25px] md:text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">
             {t("hero.title1")}
@@ -208,7 +208,7 @@ export default function Home() {
                 لصنع تجارب رقمية قوية،<br/> من تطوير البرمجيات والتطبيقات المخصصة
                 وصولاً إلى ابتكار استراتيجيات تسويقية مؤثرة في فابلوكس جروب،
                 نحول رؤيتك إلى واقع، مع ضمان تحقيق نتائج ملموسة ونمو مستدام.
-              </p>
+              </p>  
             )}
           </motion.div>
           <div className="absolute right-[-200px] top-1 z-[-1]">
@@ -309,7 +309,7 @@ export default function Home() {
           </div>
         </div>
         {/* slider */}
-        <SliderProject />
+        {/* <SliderProject /> */}
         {/* our Client */}
         <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
           <motion.div className="absolute left-0 top-0 z-[1000]">

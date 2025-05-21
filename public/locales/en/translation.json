@@ -32,7 +32,7 @@
     "title": "Growing up business for good future brand",
     "subtitle": "Growing up business for good future brand",
     "text": "With Fablox Group, your path to success is 100% guaranteed because you are dealing with a group of specialists and experts in the world of software.",
-    "title1" : "We have a distinguished group in various businesses." , 
+    "title1": "We have a distinguished group in various businesses.",
     "button": "Take A Look"
   },
   "about": {
@@ -84,34 +84,33 @@
     "subtitle": "Users from all over the world",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequa."
   },
-  "portfolio" : {
+  "portfolio": {
     "title": "Welcome to the gallery of Fablux Group's works",
     "description": "Be aware that you are now viewing a group of projects designed by experts and professionals at the highest level. We hope you like them."
   },
-  "contact" : {
-    "title" : "Welcome to Fablox Group",
-    "subtitle" : "Leave your message and we will contact you as soon as possible",
-      "email" : {
-        "label" : "E-mail",
-        "placeholder" : "Entre your Email",
-        "error" : "Please enter a valid email address"
-      },
-      "name" : {
-        "label" : "Your Company Name",
-        "placeholder" : "Entre your Company Name",
-        "error" : "Please enter your company name"
-      },
-      "phone" : {
-        "label" : "Contact phone number",
-        "placeholder" : "Entre your Phone Number",
-        "error" : "Please enter a valid phone number"
-      },
-      "message" : {
-        "label" : "Message topic",
-        "placeholder" : "Entre your Message",
-        "error" : "Please enter your message topic"
-      },
-      "submit" : "Send"
-    
+  "contact": {
+    "title": "Welcome to Fablox Group",
+    "subtitle": "Leave your message and we will contact you as soon as possible",
+    "email": {
+      "label": "E-mail",
+      "placeholder": "Entre your Email",
+      "error": "Please enter a valid email address"
+    },
+    "name": {
+      "label": "Your Company Name",
+      "placeholder": "Entre your Company Name",
+      "error": "Please enter your company name"
+    },
+    "phone": {
+      "label": "Contact phone number",
+      "placeholder": "Entre your Phone Number",
+      "error": "Please enter a valid phone number"
+    },
+    "message": {
+      "label": "Message topic",
+      "placeholder": "Entre your Message",
+      "error": "Please enter your message topic"
+    },
+    "submit": "Send"
   }
 }
