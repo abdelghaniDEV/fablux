@@ -21,6 +21,8 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useTranslation } from "react-i18next";
 import Contact from "./Contact";
+import { useDispatch } from "react-redux";
+import { fetchProject } from "../../redux/slices/projectSlice";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -28,6 +30,11 @@ export default function Header() {
   const { t, i18n } = useTranslation();
   const [changeLang, setChangeLang] = useState(false);
   const [openNav, setOpenNav] = useState(false);
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(fetchProject())
+  },[])
 
   useEffect(() => {
     const changeLanguage = () => {
@@ -48,18 +55,18 @@ export default function Header() {
     changeLanguage();
   }, [changeLang, i18n]); 
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      const headerHeight = 70; // ارتفاع الهيدر (تعديله حسب تصميمك)
-      const sectionPosition = section.offsetTop - headerHeight;
+  // const scrollToSection = (sectionId) => {
+  //   const section = document.getElementById(sectionId);
+  //   if (section) {
+  //     const headerHeight = 70; // ارتفاع الهيدر (تعديله حسب تصميمك)
+  //     const sectionPosition = section.offsetTop - headerHeight;
   
-      window.scrollTo({
-        top: sectionPosition,
-        behavior: "smooth",
-      });
-    }
-  };
+  //     window.scrollTo({
+  //       top: sectionPosition,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
   
   return (
     <div className="flex items-center justify-between py-4 container relative md:px-10">

@@ -309,7 +309,7 @@ export default function Home() {
           </div>
         </div>
         {/* slider */}
-        {/* <SliderProject /> */}
+        <SliderProject />
         {/* our Client */}
         <div className="flex flex-col md:flex-row  items-center gap-[80px] md:px-10 pt-4 pb-10 relative ">
           <motion.div className="absolute left-0 top-0 z-[1000]">

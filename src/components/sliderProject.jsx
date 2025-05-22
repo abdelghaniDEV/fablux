@@ -1,27 +1,59 @@
-// import Carousel from "react-multi-carousel";
-// import "react-multi-carousel/lib/styles.css";
-// const responsive = {
-//   superLargeDesktop: {
-//     // the naming can be any, depends on you.
-//     breakpoint: { max: 4000, min: 3000 },
-//     items: 5
-//   },
-//   desktop: {
-//     breakpoint: { max: 3000, min: 1024 },
-//     items: 3
-//   },
-//   tablet: {
-//     breakpoint: { max: 1024, min: 464 },
-//     items: 2
-//   },
-//   mobile: {
-//     breakpoint: { max: 464, min: 0 },
-//     items: 1
-//   }
-// };
-// <Carousel responsive={responsive}>
-//   <div>Item 1</div>
-//   <div>Item 2</div>
-//   <div>Item 3</div>
-//   <div>Item 4</div>
-// </Carousel>;
+import React from "react";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { useSelector } from "react-redux";
+import Autoplay from "embla-carousel-autoplay"
+
+export default function SliderProject() {
+  const projects = useSelector((state) => state.projects);
+
+  return (
+    <div className="py-10">
+      <Carousel
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+        Autoplay({
+          delay: 2000,
+        }),
+      ]}
+      >
+        <CarouselContent>
+          {projects.map((project) => {
+            return (
+              <CarouselItem>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-[22px] font-[700] text-main-primary">
+                      Latest Works
+                    </h3>
+                    <h1 className="text-[25px] font-[700]">
+                      {project.name} - {project.type}
+                    </h1>
+                    <p>{project.description}</p>
+                  </div>
+                  <div className="w-full h-[300px] border-[2px] border-primary rounded-[10px]">
+                    <img
+                      src={project.image}
+                      alt={project.name}
+                      className="w-full h-full rounded-[10px] object-cover"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            );
+          })}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
+    </div>
+  );
+}
