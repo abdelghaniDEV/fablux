@@ -37,13 +37,13 @@ export default function SliderProject() {
                     <h1 className="text-[25px] font-[700]">
                       {project.name} - {project.type}
                     </h1>
-                    <p>{project.description}</p>
+                    <p className="font-outfit text-[#CFCFCF] line-clamp-3 md:line-clamp-6">{project.description}</p>
                   </div>
-                  <div className="w-full h-[300px] border-[2px] border-primary rounded-[10px]">
+                  <div className="w-full h-[200px] md:h-[300px] border-[2px] border-primary rounded-[10px]">
                     <img
                       src={project.image}
                       alt={project.name}
-                      className="w-full h-full rounded-[10px] object-cover"
+                      className="w-full h-[200px] rounded-[10px] object-cover"
                     />
                   </div>
                 </div>

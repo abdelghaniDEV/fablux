@@ -50,7 +50,7 @@ export default function WorkDetails() {
           </div>
           <div className="">
             <img
-              src={import.meta.env.VITE_API_IMG + findProject?.image}
+              src={findProject?.image}
               alt="Work Details"
               className="w-full h-[350px] border-[2px] rounded-[10px] border-main-primary "
             />
@@ -82,11 +82,11 @@ export default function WorkDetails() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 z-[1000]">
-              {section.photos.map((image) => {
+              {section.images.map((image) => {
                 return (
                   <img
-                    key={image}
-                    src={import.meta.env.VITE_API_IMG + image}
+                    key={section.title}
+                    src={image}
                     alt="Work Details"
                     className="w-full h-[280px]"
                   />

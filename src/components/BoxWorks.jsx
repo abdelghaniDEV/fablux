@@ -18,7 +18,7 @@ export default function ({ project }) {
           <p className="text-[17px] text-white capitalize">
             {project.name}
           </p>
-          <p className={`text-[14px] text-main-text capitalize text-center ${i18n.language === "ar" ? "font-tajawal" : "font-outfit"} font-outfit`}>
+          <p className={`text-[14px] text-main-text line-clamp-3 capitalize text-center  font-outfit`}>
             {project.description}
           </p>
         </div>
