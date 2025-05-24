@@ -8,6 +8,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Business from "./pages/Business";
 import WorkDetails from "./pages/WorkDetails";
+import About from "./pages/About";
 import { Route, Router, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { fetchProject } from "../redux/slices/projectSlice";
@@ -31,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/business" element={<Business />} />
         <Route path="/business/:id" element={<WorkDetails />} />
+        <Route path="/about" element={<About />}  />
       </Routes>
       <Footer />
     </>

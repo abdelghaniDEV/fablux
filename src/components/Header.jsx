@@ -99,7 +99,7 @@ export default function Header() {
             setOpenNav(false)
             scrollToSection("about")
           }}>
-            {t("header.about")}
+            <Link to={'/about'}>{t("header.about")}</Link>
           </li>
           <li className="py-2 md:py-0" onClick={() => {
             setOpenNav(false)
