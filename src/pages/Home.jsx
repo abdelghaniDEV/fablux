@@ -144,6 +144,7 @@ export default function Home() {
           {/* list Service */}
           <div className="grid md:grid-cols-4 gap-[10px] my-8 z-[1000]">
             <BoxService
+            border={true}
               icon={
                 <LayoutGrid className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }
@@ -151,6 +152,7 @@ export default function Home() {
               description={t("service.services.app.description")}
             />
             <BoxService
+            border={false}
               icon={
                 <PanelTop className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }
@@ -158,6 +160,7 @@ export default function Home() {
               description={t("service.services.web.description")}
             />
             <BoxService
+            border={true}
               icon={
                 <PenTool className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }
@@ -172,6 +175,7 @@ export default function Home() {
               description={t("service.services.photo.description")}
             />
             <BoxService
+            border={true}
               icon={
                 <Box className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }
@@ -186,6 +190,7 @@ export default function Home() {
               description={t("service.services.business.description")}
             />
             <BoxService
+            border={true}
               icon={
                 <File className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }
@@ -193,6 +198,7 @@ export default function Home() {
               description={t("service.services.company.description")}
             />
             <BoxService
+            
               icon={
                 <Medal className=" text-main-primary absolute top-[22%] left-[20px] w-[40px] h-[40px]" />
               }

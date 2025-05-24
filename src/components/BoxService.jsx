@@ -5,11 +5,11 @@ import { ChevronRight, LayoutGrid } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "motion/react";
 
-export default function ({ title, description, icon }) {
+export default function ({ title, description, icon , border }) {
   const { t, i18n } = useTranslation();
   return (
 
-      <Card className="bg-main-background z-[1000]  border-main-primary text-white px-5 py-8 flex flex-col items-center justify-center gap-3">
+      <Card className={`bg-main-background z-[1000] shadow-m shadow-main-primary ${border ? "border-b-0 rounded-t-[20px] rounded-b-none" : "border-t-0 rounded-b-[20px] rounded-t-none"}     border-main-primary text-white px-5 py-8 flex flex-col items-center justify-center gap-3`}>
       <div className="t  bg-[#5F5F5F33] relative p-3 rounded-full w-[80px] h-[80px]">
         {icon}
       </div>
