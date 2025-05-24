@@ -18,7 +18,7 @@ export default function WorkDetails() {
   });
 
   return (
-    <div className="container relative  overflow-hidden ">
+    <div className="containeer relative  overflow-hidden ">
       <div className="">
         <div className="flex flex-col items-center gap-4  justify-center py-3 md:py-10 ">
           <h1 className="text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">

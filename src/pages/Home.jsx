@@ -34,7 +34,7 @@ export default function Home() {
   const titleService = t("service.title");
   return (
     <div className="overflo overflow-hidden ">
-      <div className="container">
+      <div className="containeer">
         {/* hero */}
         <div className="md:flex   items-center gap-[100px] py-10 relative z-[40]">
           <motion.div className="md:w-[700px] text-center md:text-start z-[10]">
@@ -111,7 +111,7 @@ export default function Home() {
           id="about"
           className="flex flex-col md:flex-row items-center gap-5 md:gap-[80px] md:px-20 py-4 relative "
         >
-          <motion.div
+          {/* <motion.div
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1 }}
@@ -122,8 +122,8 @@ export default function Home() {
               className="md:w-[1100px] w-[200px]"
               alt="Group Image"
             />
-          </motion.div>
-          <motion.div
+          </motion.div> */}
+          {/* <motion.div
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 1 }}
@@ -135,58 +135,7 @@ export default function Home() {
             <h1 className="text-[25px] md:text-[28px] font-[700]">
               {t("about.title")}
             </h1>
-            {/* {i18n.language === "en" ? (
-              <p className="text-[14px] md:text-[18px]">
-                At{" "}
-                <span className="font-[700] text-main-primary">
-                  {" "}
-                  fablux group
-                </span>
-                , we bring visions to life through innovative digital solutions.
-                From user-focused websites and dynamic
-                <span className="text-main-primary">
-                  {" "}
-                  e-commerce platforms
-                </span>{" "}
-                to <span className="text-main-primary">mobile apps</span>,
-                <span className="text-main-primary"> digital marketing</span>,
-                and
-                <span className="text-main-primary"> creative content</span>, we
-                help brands stand out in a competitive world.
-                <br />
-                Our passionate team works closely with clients to deliver
-                tailored strategies that ensure success and build a strong
-                digital presence.
-                <br />
-                <span className="font-[700] text-main-accent mt-1">
-                  Join us to build a strong digital presence and achieve
-                  remarkable success. Let’s create the future together!
-                </span>
-              </p>
-            ) : (
-              <p className="text-[14px] md:text-[18px]">
-                في{" "}
-                <span className="text-main-primary font-[700]">
-                  مجموعة فابلوكس
-                </span>
-                ، نحول الرؤى إلى واقع من خلال حلول رقمية مبتكرة. بدءًا من
-                المواقع الموجهة للمستخدم ومنصات التجارة الإلكترونية الديناميكية
-                إلى تطبيقات الهواتف، التسويق الرقمي، والمحتوى الإبداعي، نساعد
-                العلامات التجارية على التميز في عالم تنافسي.
-                <br />
-                <span className="font-[700]">
-                  يعمل فريقنا من المطورين والمصممين والمسوقين وخبراء التصوير
-                  بإبداع وشغف لتحقيق رؤيتك. نتبع نهجًا يركز على العميل، حيث نعمل
-                  معك خطوة بخطوة لفهم أهدافك وتقديم حلول مخصصة تميزك في العالم
-                  الرقمي.
-                </span>
-                <br />
-                <span className=" font-[700] text-main-accent">
-                  انضم إلينا لنساعدك في بناء حضور رقمي قوي وتحقيق نجاح باهر دعنا
-                  نبني المستقبل معًا!
-                </span>
-              </p>
-            )} */}
+            
             {i18n.language === "en" ? (
               <p className="text-[18px]">
                 Fablux Group is a leading company specializing in programming
@@ -210,7 +159,7 @@ export default function Home() {
                 نحول رؤيتك إلى واقع، مع ضمان تحقيق نتائج ملموسة ونمو مستدام.
               </p>  
             )}
-          </motion.div>
+          </motion.div> */}
           <div className="absolute right-[-200px] top-1 z-[-1]">
             <img src={design02} className="w-[800px]" alt="Map" />
           </div>

@@ -13,7 +13,7 @@ export default function Business() {
   const { t } = useTranslation()
   const projects = useSelector((state) => state.projects)
   return (
-    <div className="container relative overflow-hidden">
+    <div className="containeer relative overflow-hidden">
       <div className="flex flex-col items-center gap-4  justify-center py-10">
         <h1 className="text-[20px] md:text-[28px] font-[700] text-center leading-[30px] bg-gradient-to-r from-[#19e7f7] to-[#067b84] bg-clip-text text-transparent">
           {t('portfolio.title')}
